@@ -3,7 +3,7 @@ db = {
         {"name": "GRN", "clr": "green", "seats": 0},
         {"name": "LIB", "clr": "red", "seats": 15},
         {"name": "NDP", "clr": "orange", "seats": 10},
-        {"name": "PC", "clr": "dark-blue", "seats": 30},
+        {"name": "PC", "clr": "blue", "seats": 12},
     ],
     "leaders": {
         "ford": "leading",
