@@ -24,7 +24,7 @@
 }
 
 button.pica-accordion:after {
-    content: '\002B';
+    content: "+";
     color: #777;
     font-weight: bold;
     float: right;
@@ -32,5 +32,9 @@ button.pica-accordion:after {
 }
 
 button.pica-accordion.pica-active:after {
-    content: "\2212";
+    content: "-";
+}
+
+.striped--light-gray:nth-child(odd) {
+  background-color: lightgrey;
 }

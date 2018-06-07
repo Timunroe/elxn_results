@@ -19,74 +19,74 @@ page_template = '''\
 '''
 
 core_template = '''\
-<section class="bt bb b--gray pt2 pb3 mb2" id="party-seats">
-        <div class="ttu mb1">Ontario Election Results</div>
-        <div class="flex flex-wrap pv1 mb1">
+<section style="border-top-style: solid; border-top-width: 1px; border-bottom-style: solid; border-bottom-width: 1px; border-color: lightgrey; padding-top: 8px; padding-bottom: 12px; margin-bottom: 8px; font-family: -apple-system, BlinkMacSystemFont, avenir, helvetica, ubuntu, roboto, noto, arial, sans-serif;" class="" id="party-seats">
+        <div style="margin-bottom: 4px; text-transform: uppercase; font-size: 12px;" class="">Ontario Election Results</div>
+        <div style="display: flex; flex-wrap: wrap; padding-top: 4px; padding-bottom: 4px; margin-bottom: 4px;" class="">
             {% for item in data['parties']|sort(attribute='seats', reverse=True) %}
-            <div class="f2 w-25 bl bw4 b--{{item['clr']}} mb1 pl2">{{item['name']}} <span class="fw8">{{ item['seats'] }}</span></div>
+            <div style="width: 25%; border-left-style: solid; border-left-width: 12px; border-color: {{ item['clr'] }}; margin-bottom: 4px; padding-left: 6px; font-size: 26px;" class=""><span style="font-weight: 200;">{{item['name']}}</span> <span style="font-weight: 800;" class="">{{ item['seats'] }}</span></div>
             {% endfor %}
         </div>
-        <div class="f6">
+        <div style="font-size: 10px;" class="">
             Note: Ridings won or leading. Total of 124 ridings: 63 needed for a majority.<br>
             All results are unofficial until final ballot counts are verified by <a href="https://www.elections.on.ca/en.html">Elections Ontario</a>.
         </div>
     </section>
 
-    <section class="bb b--gray pt2 pb2 mb2" id="party-leaders">
-        <div class="ttu">Party Leaders</div>
-        <div class="flex flex-wrap pv1">
-            <div class="flex w-100 w-50-ns mb2">
-                <div class="w-50">
-                    <div class="f4 fw5">Doug Ford</div>
-                    <div class="f6 pv1">PC - Etobicoke North</div>
-                    <div class="f5">{{ data['leaders']['ford']|title }}</div>
+    <section style="border-bottom-style: solid; border-bottom-width: 1px; border-color: lightgrey; padding-top: 8px; padding-bottom: 8px; margin-bottom: 8px; font-family: -apple-system, BlinkMacSystemFont, avenir, helvetica, ubuntu, roboto, noto, arial, sans-serif;" class="" id="party-leaders">
+        <div style="text-transform: uppercase; font-size: 12px; margin-bottom: 4px;" class="">Party Leaders</div>
+        <div style="display: flex; flex-wrap: wrap;" class="pv1">
+            <div style="display: flex; flex-basis: 400px; margin-bottom: 8px;" class="">
+                <div style="flex-basis: 50%;" class="">
+                    <div style="font-weight: 500; font-size: 16px;" class="">Doug Ford</div>
+                    <div style="padding-top: 4px; padding-bottom: 4px; font-size: 10px;" class="">PC - Etobicoke North</div>
+                    <div style="" class="f5">{{ data['leaders']['ford']|title }}</div>
                 </div>
-                <div class="w-50">
-                    <div class="f4 fw5">Andrea Horwath</div>
-                    <div class="f6 pv1">NDP - Hamilton Centre</div>
+                <div style="flex-basis: 50%;" class="">
+                    <div style="font-weight: 500; font-size: 16px;" class="">Andrea Horwath</div>
+                    <div style="padding-top: 4px; padding-bottom: 4px; font-size: 10px;" class="">NDP - Hamilton Centre</div>
                     <div class="f5">{{ data['leaders']['horwath']|title }}</div>
                 </div>
             </div>
-            <div class="flex w-100 w-50-ns">
-                <div class="w-50">
-                    <div class="f4 fw5">Mike Schreiner</div>
-                    <div class="f6 pv1">GRN - Guelph</div>
+            <div style="display: flex; flex-basis: 400px;" class="w-100 w-50-ns">
+                <div style="flex-basis: 50%;" class="">
+                    <div style="font-weight: 500; font-size: 16px;" class="">Mike Schreiner</div>
+                    <div style="padding-top: 4px; padding-bottom: 4px; font-size: 10px;" class="">GRN - Guelph</div>
                     <div class="f5">{{ data['leaders']['schreiner']|title }}</div>
                 </div>
-                <div class="w-50">
-                    <div class="f4 fw5">Kathleen Wynne</div>
-                    <div class="f6 pv1">LIB - Don Valley West</div>
+                <div style="flex-basis: 50%;" class="">
+                    <div style="font-weight: 500; font-size: 16px;" class="">Kathleen Wynne</div>
+                    <div style="padding-top: 4px; padding-bottom: 4px; font-size: 10px;" class="">LIB - Don Valley West</div>
                     <div class="f5">{{ data['leaders']['wynne']|title }}</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class=" bb b--gray pt2 pb2" id="local-ridings">
-        <div class="pb2 ttu">Local ridings</div>
+    <section style="border-bottom-style: solid; border-bottom-width: 1px; border-color: lightgrey; padding-top: 8px; padding-bottom: 8px; font-family: -apple-system, BlinkMacSystemFont, avenir, helvetica, ubuntu, roboto, noto, arial, sans-serif;" class="" id="local-ridings">
+        <div style="padding-bottom: 8px; text-transform: uppercase; font-size: 12px;" class="">Local ridings</div>
         {% for riding in data['ridings'] %}
-        <button class="pica-accordion fw6">{{ riding['name']|safe }}</button>
+        <button style="font-weight: 600; font-size: 16px;" class="pica-accordion">{{ riding['name']|safe }}</button>
         <div class="pica-panel">
-            <table class="collapse ba br2 b--black-10 pv2 w-100">
+            <table style="font-size: 12px; width: 100%; padding-top: 8px; padding-bottom: 8px; border-style: solid; border-width: 1px; border-collapse: collapse; border-spacing: 0; border-radius: .25rem; border-color: gainsboro;" class="">
                 <tbody>
                     <tr class="striped--light-gray">
-                        <th class="tl f6 fw6 ttu pv2 ph3">Party</th>
-                        <th class="tl f6 fw6 ttu pv2 ph3">Candidate</th>
-                        <th class="tl f6 fw6 ttu pv2 ph3">Votes</th>
-                        <th class="tl f6 fw6 ttu pv2 ph3">Pct</th>
+                        <th style="text-align: left; font-weight: 600; text-transform: uppercase; padding-top: 8px; padding-bottom: 8px; padding-left: 12px; padding-right: 12px;" class="f6">Party</th>
+                        <th style="text-align: left; font-weight: 600; text-transform: uppercase; padding-top: 8px; padding-bottom: 8px; padding-left: 12px; padding-right: 12px;" class="f6">Candidate</th>
+                        <th style="text-align: left; font-weight: 600; text-transform: uppercase; padding-top: 8px; padding-bottom: 8px; padding-left: 12px; padding-right: 12px;" class="f6">Votes</th>
+                        <th style="text-align: left; font-weight: 600; text-transform: uppercase; padding-top: 8px; padding-bottom: 8px; padding-left: 12px; padding-right: 12px;" class="f6">Pct</th>
                     </tr>
                     {% set total = riding['candidates']|sum(attribute='votes') %}
 
                     {% for candidate in riding['candidates']|sort(attribute='votes', reverse=True) %}
                     <tr class="striped--light-gray">
-                        <td class="pv2 ph3">{{ candidate['party'] }}</td>
-                        <td class="pv2 ph3">{{ candidate['name'] }}</td>
-                        <td class="pv2 ph3">{{ candidate['votes'] }}</td>
+                        <td style="padding-top: 8px; padding-bottom: 8px; padding-left: 12px; padding-right: 12px;" class="">{{ candidate['party'] }}</td>
+                        <td style="padding-top: 8px; padding-bottom: 8px; padding-left: 12px; padding-right: 12px;" class="">{{ candidate['name'] }}</td>
+                        <td style="padding-top: 8px; padding-bottom: 8px; padding-left: 12px; padding-right: 12px;" class="">{{ candidate['votes'] }}</td>
                         {% if candidate['votes'] != 0 %}
                         {% set pct = (candidate['votes'] / total) * 100 %}
-                        <td class="pv2 ph3">{{ pct|round(1, 'common') }}</td>
+                        <td style="padding-top: 8px; padding-bottom: 8px; padding-left: 12px; padding-right: 12px;" class="">{{ pct|round(1, 'common') }}</td>
                         {% else %}
-                        <td class="pv2 ph3">0</td>
+                        <td style="padding-top: 8px; padding-bottom: 8px; padding-left: 12px; padding-right: 12px;" class="">0</td>
                         {% endif %}
                     </tr>
                     {% endfor %}
