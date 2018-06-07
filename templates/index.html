@@ -5,7 +5,13 @@
 <section class="sans-serif" style="max-width: 800px; min-width: 385px; margin: 0 auto;">
     <form action="/" method="post">
         <p>
-            <button type="submit" name="action" class="f6 link dim br2 ph3 pv2 mb2 dib black bg-yellow" value="deploy">Update Website</button>
+            <button type="submit" name="action" class="f6 link dim br2 ph3 pv2 mb2 dib white bg-red" value="fetch_cp">Fetch CP Data</button>
+            <button type="submit" name="action" class="f6 link dim br2 ph3 pv2 mb2 dib white bg-dark-green" value="deploy_cp">Update Site CP</button>
+            ||
+            <button type="submit" name="action" class="f6 link dim br2 ph3 pv2 mb2 dib white bg-orange" value="fetch_manual">Fetch Hand Data</button>
+            <button type="submit" name="action" class="f6 link dim br2 ph3 pv2 mb2 dib white bg-dark-pink" value="deploy_manual">Update Site Hand</button>
+            ||
+            <a class="f6 link dim br1 ph3 pv2 mb2 dib white bg-mid-gray" href="https://www.thespec.com/news-story/8654956-election-results/?previewkey=eaaaaidkogjsqai9go7tu4rg6aevcc47hi65toans%2bz5qmn2" target="_blank">DNN Preview</a>
         </p>
     </form>
 
@@ -13,12 +19,11 @@
         <div class="ttu mb1">Ontario Election Results</div>
         <div class="flex flex-wrap pv1 mb1">
             {% for item in data['parties']|sort(attribute='seats', reverse=True) %}
-            <div class="f2 w-25 bl bw4 b--{{item['clr']}} mb1 pl2">{{item['name']}} <span class="fw8">{{ item['seats'] }}</span></div>
+            <div class="f2 w-25 bl bw4 b--{{item['clr']}} mb1 pl2">{{item['Name']}} <span class="fw8">{{ item['seats'] }}</span></div>
             {% endfor %}
         </div>
         <div class="f6">
-            Note: Ridings won or leading. Total of 124 ridings: 63 needed for a majority.<br>
-            All results are unofficial until final ballot counts are verified by <a href="https://www.elections.on.ca/en.html">Elections Ontario</a>.
+            Note: Ridings won or leading. Total of 124 ridings: 63 needed for a majority. All results are unofficial until final ballot counts are verified by <a href="https://www.elections.on.ca/en.html">Elections Ontario</a>.
         </div>
     </section>
 

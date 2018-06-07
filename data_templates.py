@@ -23,12 +23,11 @@ core_template = '''\
         <div style="margin-bottom: 4px; text-transform: uppercase; font-size: 12px;" class="">Ontario Election Results</div>
         <div style="display: flex; flex-wrap: wrap; padding-top: 4px; padding-bottom: 4px; margin-bottom: 4px;" class="">
             {% for item in data['parties']|sort(attribute='seats', reverse=True) %}
-            <div style="width: 25%; border-left-style: solid; border-left-width: 12px; border-color: {{ item['clr'] }}; margin-bottom: 4px; padding-left: 6px; font-size: 26px;" class=""><span style="font-weight: 200;">{{item['name']}}</span> <span style="font-weight: 800;" class="">{{ item['seats'] }}</span></div>
+            <div style="width: 25%; border-left-style: solid; border-left-width: 12px; border-color: {{ item['clr'] }}; margin-bottom: 4px; padding-left: 6px; font-size: 26px;" class=""><span style="font-weight: 200;">{{item['Name']}}</span> <span style="font-weight: 800;" class="">{{ item['seats'] }}</span></div>
             {% endfor %}
         </div>
         <div style="font-size: 10px;" class="">
-            Note: Ridings won or leading. Total of 124 ridings: 63 needed for a majority.<br>
-            All results are unofficial until final ballot counts are verified by <a href="https://www.elections.on.ca/en.html">Elections Ontario</a>.
+            Note: Ridings won or leading. Total of 124 ridings: 63 needed for a majority. All results are unofficial until final ballot counts are verified by <a href="https://www.elections.on.ca/en.html">Elections Ontario</a>.
         </div>
     </section>
 
@@ -47,7 +46,7 @@ core_template = '''\
                     <div class="f5">{{ data['leaders']['horwath']|title }}</div>
                 </div>
             </div>
-            <div style="display: flex; flex-basis: 400px;" class="w-100 w-50-ns">
+            <div style="display: flex; flex-basis: 400px;" class="">
                 <div style="flex-basis: 50%;" class="">
                     <div style="font-weight: 500; font-size: 16px;" class="">Mike Schreiner</div>
                     <div style="padding-top: 4px; padding-bottom: 4px; font-size: 10px;" class="">GRN - Guelph</div>

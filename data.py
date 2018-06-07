@@ -25,10 +25,10 @@ def save_file_overwrite(s_contents, s_name):
     return
 
 
-def build_template():
+def build_template(db):
     print("Building template for DNN")
     # template_data = {"posts": model.get_lineup()}
-    html = Environment().from_string(tmpl.core_template).render(data=model.db)
+    html = Environment().from_string(tmpl.core_template).render(data=db)
     html_minified = minify_html(html)
     css = fetch.fetch_css()
     script = Template(tmpl.script_template).substitute(css=css, minified=html_minified)

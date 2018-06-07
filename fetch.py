@@ -1,13 +1,15 @@
 import requests
 import boto3
 import random
+import config as cfg
 
 
 def put_S3():
     print("++++++++++++\nNow in Put S3 module ...")
+    filename = cfg.config['project_name'] + '_' + cfg.config['name'] + ".js"
     s3 = boto3.resource('s3')
-    data = open('./build/elxn_results_spec.js', 'rb')
-    s3.Bucket('picabot').put_object(Key='pagejs/elxn__results_spec.js', Body=data)
+    data = open('./build/' + filename, 'rb')
+    s3.Bucket('picabot').put_object(Key='pagejs/' + filename, Body=data, CacheControl="max-age=600")
     return
 
 
