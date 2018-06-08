@@ -6,17 +6,57 @@ import json
 db = {
     "parties": [
         {"Name": "GRN", "clr": "green", "seats": 0},
-        {"Name": "LIB", "clr": "red", "seats": 1},
-        {"Name": "NDP", "clr": "orange", "seats": 2},
-        {"Name": "PC", "clr": "blue", "seats": 2},
+        {"Name": "LIB", "clr": "red", "seats": 0},
+        {"Name": "NDP", "clr": "orange", "seats": 0},
+        {"Name": "PC", "clr": "blue", "seats": 0},
     ],
     "leaders": {
-        "ford": "leading",
-        "horwath": "leading",
-        "schreiner": "trailing",
-        "wynne": "leading",
+        "ford": "",
+        "horwath": "",
+        "schreiner": "",
+        "wynne": "",
     },
     "ridings": [
+        {
+            "name": "Burlington",
+            "candidates": [
+                {
+                    "name": "Nadine Bentham",
+                    "party": "NAP",
+                    "votes": 0
+                },
+                {
+                    "name": "Andrew Drummond",
+                    "party": "NDP",
+                    "votes": 0
+                },
+                {
+                    "name": "Vince Fiorito",
+                    "party": "GRN",
+                    "votes": 0
+                },
+                {
+                    "name": "Jim Gilchrist",
+                    "party": "LTN",
+                    "votes": 0
+                },
+                {
+                    "name": "Jane McKenna",
+                    "party": "PC",
+                    "votes": 0
+                },
+                {
+                    "name": "Eleanor McMahon",
+                    "party": "LIB",
+                    "votes": 0
+                },
+                {
+                    "name": "Peter Rusin",
+                    "party": "CNS",
+                    "votes": 0
+                }
+            ]
+        },
         {
             "name": "Flamborough&ndash;Glanbrook",
             "candidates": [
@@ -54,163 +94,103 @@ db = {
                     "name": "Donna Skelly",
                     "party": "PC",
                     "votes": 0
-                }],
+                }
+            ]
         },
         {
-            'name': 'Hamilton Centre',
-            'candidates': [
-                {
-                    'name': 'Maria Anastasiou',
-                    'party': 'IND',
-                    'votes': 0
-                },
-                {
-                    'name': 'Mary Ellen Campbell',
-                    'party': 'COM',
-                    'votes': 0
-                },
-                {
-                    'name': 'Dionne Duncan',
-                    'party': 'PC',
-                    'votes': 0
-                },
-                {
-                    'name': 'Andrea Horwath',
-                    'party': 'NDP',
-                    'votes': 0
-                },
-                {
-                    'name': 'Tony Lemma',
-                    'party': 'NAP',
-                    'votes': 0
-                },
-                {
-                    'name': 'Jason Lopez',
-                    'party': 'GRN',
-                    'votes': 0
-                },
-                {
-                    'name': 'Deirdre Pike',
-                    'party': 'LIB',
-                    'votes': 0
-                },
-                {
-                    'name': 'Robert Young',
-                    'party': 'LTN',
-                    'votes': 0
-                }]
-        },
-        {
-            "name": "Hamilton East&ndash;Stoney Creek",
+            "name": "Haldimand&ndash;Norfolk",
             "candidates": [
                 {
-                    "name": "Linda Chenoweth",
-                    "party": "NAP",
-                    "votes": 0
-                },
-                {
-                    "name": "Allan deRoo",
-                    "party": "LTN",
-                    "votes": 0
-                },
-                {
-                    "name": "Akash Grewal",
+                    "name": "Toby Barrett",
                     "party": "PC",
                     "votes": 0
                 },
                 {
-                    "name": "Paul Miller",
+                    "name": "Danielle Du Sablon",
                     "party": "NDP",
                     "votes": 0
                 },
                 {
-                    "name": "Lucina Monroy",
-                    "party": "NPC",
-                    "votes": 0
-                },
-                {
-                    "name": "Brian Munroe",
+                    "name": "Anne Faulkner",
                     "party": "GRN",
                     "votes": 0
                 },
                 {
-                    "name": "Jennifer Stebbing",
-                    "party": "LIB",
-                    "votes": 0
-                }],
-        },
-        {
-            "name": "Hamilton Mountain",
-            "candidates": [
-                {
-                    "name": "Kristofer Maves",
-                    "party": "LTN",
+                    "name": "Wasyl Ivan Luczkiw",
+                    "party": "MCP",
                     "votes": 0
                 },
                 {
-                    "name": "Scott Patrick Miller",
-                    "party": "NAP",
-                    "votes": 0
-                },
-                {
-                    "name": "Esther Pauls",
-                    "party": "PC",
-                    "votes": 0
-                },
-                {
-                    "name": "Damin Starr",
+                    "name": "Dan Matten",
                     "party": "LIB",
                     "votes": 0
                 },
                 {
-                    "name": "Monique Taylor",
-                    "party": "NDP",
-                    "votes": 0
-                },
-                {
-                    "name": "Dave Urquhart",
-                    "party": "GRN",
-                    "votes": 0
-                }],
-        },
-        {
-            "name": "Hamilton West&ndash;Ancaster&ndash;Dundas",
-            "candidates": [
-                {
-                    "name": "Stephanie Davies",
+                    "name": "Dan Preston",
                     "party": "NAP",
                     "votes": 0
                 },
                 {
-                    "name": "Nicholas Dushko",
-                    "party": "LTN",
+                    "name": "Carolyn Ritchie",
+                    "party": "PPO",
                     "votes": 0
                 },
                 {
-                    "name": "Jim Enos",
+                    "name": "Thecla Ross",
+                    "party": "FP",
+                    "votes": 0
+                },
+                {
+                    "name": "Christopher Rosser",
+                    "party": "LTN",
+                    "votes": 0
+                }
+            ]
+        },
+        {
+            "name": "Hamilton Centre",
+            "candidates": [
+                {
+                    "name": "Maria Anastasiou",
                     "party": "IND",
                     "votes": 0
                 },
                 {
-                    "name": "Ben Levitt",
+                    "name": "Mary Ellen Campbell",
+                    "party": "COM",
+                    "votes": 0
+                },
+                {
+                    "name": "Dionne Duncan",
                     "party": "PC",
                     "votes": 0
                 },
                 {
-                    "name": "Ted McMeekin",
-                    "party": "LIB",
+                    "name": "Andrea Horwath",
+                    "party": "NDP",
                     "votes": 0
                 },
                 {
-                    "name": "Peter Ormond",
+                    "name": "Tony Lemma",
+                    "party": "NAP",
+                    "votes": 0
+                },
+                {
+                    "name": "Jason Lopez",
                     "party": "GRN",
                     "votes": 0
                 },
                 {
-                    "name": "Sandy Shaw",
-                    "party": "NDP",
+                    "name": "Deirdre Pike",
+                    "party": "LIB",
                     "votes": 0
-                }],
+                },
+                {
+                    "name": "Robert Young",
+                    "party": "LTN",
+                    "votes": 0
+                }
+            ],
         },
     ],
 }
@@ -235,7 +215,7 @@ def get_api():
     # print(data['Election']['Riding'])
     # extract ridings of interest info
     ridings_list = ["Hamilton Centre", "Hamilton Eastâ\x80\x94Stoney Creek", "Hamilton Mountain",
-                    "Hamilton Westâ\x80\x94Ancasterâ\x80\x94Dundas", "Flamboroughâ\x80\x94Glanbrook"]
+                    "Hamilton Westâ\x80\x94Ancasterâ\x80\x94Dundas", "Flamboroughâ\x80\x94Glanbrook", "Burlington", "Niagara West", "Haldimandâ\x80\x94Norfolk", "Oakville Northâ\x80\x94Burlington", "Brantfordâ\x80\x94Brant"]
     ridings_cp = [x for x in data['Election']
                   ['Riding'] if x['RNE'] in ridings_list]
     ridings = []
@@ -251,7 +231,7 @@ def get_api():
             obj['candidates'].append(obj2)
         ridings.append(obj)
     db['ridings'] = ridings
-    db['leaders'] = {"ford": "leading", "horwath": "leading", "schreiner": "trailing", "wynne": "trailing"}
+    db['leaders'] = {"ford": "Won riding", "horwath": "Won riding", "schreiner": "Won riding", "wynne": "Won riding"}
     with io.open("cp.db", "w+", encoding='utf8') as file:
         file.write(json.dumps(db, ensure_ascii=False))
     return db
